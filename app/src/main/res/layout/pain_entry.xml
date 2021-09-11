@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/selectPainT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="left"
+        android:inputType="textPersonName"
+        android:text="Pain Level: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/painSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:entries="@array/pain_array"
+        android:gravity="right"
+        android:spinnerMode="dropdown"
+        android:textAlignment="inherit"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/selectPainLocT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Pain Location: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painSpinner"
+        android:gravity="left"/>
+
+    <Spinner
+        android:id="@+id/painLoc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/pain_loc_array"
+        android:gravity="left"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectPainLocT" />
+
+    <TextView
+        android:id="@+id/selectMoodT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Mood: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/painLoc"
+        android:gravity="left"/>
+
+    <Spinner
+        android:id="@+id/selectMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/mood_array"
+        android:gravity="left"
+        android:spinnerMode="dialog"
+
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectMoodT" />
+
+    <TextView
+        android:id="@+id/numOfStepsT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Number of steps: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectMood"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/numOfStepsGoals"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Number of steps as goal: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfSteps"
+        android:layout_marginTop="10dp"
+        android:gravity="left"/>
+
+    <EditText
+        android:id="@+id/numOfSteps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="10000"
+        android:gravity="left"
+        android:textAlignment="inherit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfStepsT"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/numOfStepsGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textAlignment="inherit"
+        android:text="20000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfStepsGoals"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/numOfStepsGoal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Edit"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/setDailyTime"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <Button
+        android:id="@+id/editSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Confirm Edit"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/setDailyTime"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <Button
+        android:id="@+id/setDailyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Set Reminder"
+        app:layout_constraintTop_toBottomOf="@+id/saveBtn"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <Button
+        android:id="@+id/saveDailyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Save Reminder"
+
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/saveBtn"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/editBtn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
